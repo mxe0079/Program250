@@ -1,6 +1,6 @@
 # Download jandan ooxx picture
 
-这个脚本是从煎蛋网ooxx模块下载随手拍图片，只使用了最简单的requests模块和re模块的用法
+脚本从煎蛋网ooxx模块下载随手拍图片，只使用了最简单的requests模块和re模块的用法
 
 ```python
 import requests
