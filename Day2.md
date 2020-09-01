@@ -35,14 +35,19 @@
 
 **My code:** 
 ```python
-PredictTheWinner(nums):
-        def choice(start, end, turn):
-            if start == end:
-                return nums[start]*turn
-            else:
-                start_value = nums[start]*turn + choice(start+1, end, -turn)
-                end_value = nums[end]*turn + choice(start, end-1, -turn)
-                return max(start_value * turn, end_value * turn) * turn
-            
-        return choice(0, len(nums)-1, 1)>=0
+def PredictTheWinner(nums):
+
+    def choice(start, end, turn):
+        if start == end:
+            return nums[start] * turn
+        else:
+            start_value = nums[start] * turn + choice(start + 1, end, -turn)
+            end_value = nums[end] * turn + choice(start, end - 1, -turn)
+            return max(start_value * turn, end_value * turn) * turn
+
+    return choice(0, len(nums) - 1, 1) >= 0
+
+
+if __name__ == "__main__":
+    print(PredictTheWinner([3606449, 6, 5, 9, ]))
 ```
